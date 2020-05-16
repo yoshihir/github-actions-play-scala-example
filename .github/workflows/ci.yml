@@ -31,7 +31,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: test-coverage-${{ runner.os }}
-          path: target/scala-2.13/scoverage-report
+          path: target/scala-2.13/scoverage-report/**/*
 
   lint:
     name: Lint
