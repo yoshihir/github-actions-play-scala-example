@@ -1,5 +1,8 @@
 name: Continuous Integration
 on: push
+  push:
+    paths-ignore:
+      - 'README.md'
 
 jobs:
   unit-test:
@@ -15,3 +18,12 @@ jobs:
 #        with:
 #          name: test-coverage-${{ matrix.os }}-${{ matrix.node }}
 #          path: coverage
+
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Lint
+        run: sbt scalafmtCheckAll
