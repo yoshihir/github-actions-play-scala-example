@@ -1,3 +1,5 @@
+![Continuous Integration](https://github.com/yoshihir/ddd-play-scala-example/workflows/Continuous%20Integration/badge.svg)
+
 # ddd-play-scala-example
 
 ### ddd

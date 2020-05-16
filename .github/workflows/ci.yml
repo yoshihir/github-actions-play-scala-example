@@ -16,6 +16,8 @@ jobs:
         with:
           path: ~/.ivy2/cache
           key: ${{ runner.os }}-sbt-ivy-cache-${{ hashFiles('**/build.sbt') }}
+          restore-keys: |
+            ${{ runner.os }}-sbt-ivy-cache-
       - name: Cache SBT
         uses: actions/cache@v1
         with:
@@ -31,7 +33,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: test-coverage-${{ runner.os }}
-          path: target/scala-2.*/scoverage-report/
+          path: target/scala-2.13/scoverage-report/
 
   lint:
     name: Lint
