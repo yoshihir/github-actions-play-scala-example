@@ -25,11 +25,13 @@ jobs:
             ${{ runner.os }}-sbt-
       - name: Test
         run: sbt test
-#      - name: Upload test coverage
-#        uses: actions/upload-artifact@v1.0.0
-#        with:
-#          name: test-coverage-${{ matrix.os }}-${{ matrix.node }}
-#          path: coverage
+      - name: create coverage report
+        run: sbt coverageReport
+      - name: Upload test coverage
+        uses: actions/upload-artifact@v2
+        with:
+          name: test-coverage-${{ runner.os }}
+          path: target/scala-*/scoverage-report
 
   lint:
     name: Lint
