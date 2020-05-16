@@ -1,4 +1,4 @@
-![Continuous Integration](https://github.com/yoshihir/ddd-play-scala-example/workflows/Continuous%20Integration/badge.svg)
+![Continuous Integration](https://github.com/yoshihir/ddd-play-scala-example/workflows/Continuous%20Integration/badge.svg?branch=master&event=push)
 
 # ddd-play-scala-example
 
