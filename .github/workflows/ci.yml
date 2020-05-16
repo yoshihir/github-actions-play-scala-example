@@ -24,14 +24,14 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-sbt-
       - name: Test
-        run: sbt test
+        run: sbt clean coverage test
       - name: create coverage report
         run: sbt coverageReport
       - name: Upload test coverage
         uses: actions/upload-artifact@v2
         with:
           name: test-coverage-${{ runner.os }}
-          path: target
+          path: target/scala-2.13/scoverage-report/
 
   lint:
     name: Lint
