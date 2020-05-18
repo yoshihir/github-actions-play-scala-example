@@ -27,9 +27,20 @@ jobs:
             ${{ runner.os }}-sbt-
       - name: Test
         run: sbt clean coverage test
+      - name: Slack notification
+        if: always()
+        # v2.0.2
+        uses: rtCamp/action-slack-notify@96d5e2a64fc78a6b7ac13265f55bee296869967a
+        env:
+          SLACK_CHANNEL: ci_notify
+          SLACK_USERNAME: CIBot
+          SLACK_COLOR: danger
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
       - name: create coverage report
+        if: success()
         run: sbt coverageReport
       - name: Upload test coverage
+        if: success()
         uses: actions/upload-artifact@v2
         with:
           name: test-coverage-${{ runner.os }}
