@@ -2,6 +2,9 @@
 
 # github-actions-play-scala-example
 
+### Created
+CI
+
 ### Remaining work
 CD(AWS)
 
