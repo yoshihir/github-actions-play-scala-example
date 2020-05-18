@@ -35,6 +35,7 @@ jobs:
           SLACK_CHANNEL: ci_notify
           SLACK_USERNAME: CIBot
           SLACK_COLOR: danger
+          SLACK_TITLE: CI Failure
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
       - name: create coverage report
         if: success()
