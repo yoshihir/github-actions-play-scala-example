@@ -28,7 +28,7 @@ jobs:
       - name: Test
         run: sbt clean coverage test
       - name: Slack notification
-        if: always()
+        if: failure()
         # v2.0.2
         uses: rtCamp/action-slack-notify@96d5e2a64fc78a6b7ac13265f55bee296869967a
         env:
