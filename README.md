@@ -1,16 +1,10 @@
 ![Continuous Integration](https://github.com/yoshihir/ddd-play-scala-example/workflows/Continuous%20Integration/badge.svg?branch=master&event=push)
 
-# ddd-play-scala-example
+# github-actions-play-scala-example
 
-### ddd
-[sample](https://github.com/little-hands/ddd-examples/)
+### Remaining work
+CD(AWS)
 
-### ZIO
-https://github.com/larousso/play-zio
+### Other
+[references](https://booth.pm/ja/items/1865906)
 
-https://github.com/zio/zio
-
-https://logmi.jp/tech/articles/321959
-
-### scala-steward
-https://github.com/fthomas/scala-steward
