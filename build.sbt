@@ -1,4 +1,4 @@
-name := """ddd-play-scala-example"""
+name := """github-actions-play-scala-example"""
 organization := "com.example"
 
 version := "1.0-SNAPSHOT"
